@@ -26,6 +26,14 @@ def decompose_lsb(image):
         tmp[i] = tmp[i]&1
     return tmp
 
+# decompose une image [h][w][3] en ses bits de poids faibles sur une de ses composantes
+# retourne [h*w] (0->1)
+def decompose_lsb_comp(image,comp):
+    tmp = decompose_comp(image,comp)
+    for i in range(len(tmp)):
+        tmp[i] = tmp[i]&1
+    return tmp
+
 # recompose une image a partir de la taille d'une image initiale et d'un tableau de pixel [h*w*3] (0->255)
 # retourne une Image
 def imageRecompose(imageVectorized,imageInitiale):
@@ -98,9 +106,9 @@ def create_hamming(k):
     n = 2**k-1
     m = n-k
 
-    G = np.diag([1]*m)
-    H = np.diag([1]*(n-m))
-    P = np.zeros([m,n-m])
+    G = np.diag(np.ones(m, dtype=np.int))
+    H = np.diag(np.ones(n-m, dtype=np.int))
+    P = np.zeros([m,n-m], dtype=np.int)
     o = 0
     for i in range(1,n+1):
         if 2**(log2(i)) != i:
