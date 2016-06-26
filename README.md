@@ -9,7 +9,11 @@ It contains :
 
 -a directory hamming_LSB which contains a hide.py file and a reveal.py file, which use the content in utils directory in order to hide/reveal a message through LSB with Hamming syndrom
 
--a directory comparaison which contains tools and programs which are used in order to show that hamming syndrom LSB is far better than simple LSB
+-a directory comparaison which contains tools and programs which are used in order to show that hamming syndrom LSB is far better than simple LSB (for example you can type
+```shell
+./histogram_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb.png  ../simple_LSB/classical_lsb.png
+```
+in the directory and see generated hsitograms)
 
 -a directory utils which contains useful functions for LSB directories
 
