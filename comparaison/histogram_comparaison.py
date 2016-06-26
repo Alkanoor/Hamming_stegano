@@ -58,6 +58,6 @@ for i in range(len(images)):
     tmp = tmp[-1]
     tmp = tmp.split('\\')
     tmp = tmp[-1]
-    plt.savefig("histogram_"+tmp)
+    plt.savefig("histogram_"+component+"_"+tmp)
 
 plt.show()
