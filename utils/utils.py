@@ -98,9 +98,9 @@ def create_hamming(k):
     n = 2**k-1
     m = n-k
 
-    G = np.diag([1]*m)
-    H = np.diag([1]*(n-m))
-    P = np.zeros([m,n-m])
+    G = np.diag(np.ones(m, dtype=np.int))
+    H = np.diag(np.ones(n-m, dtype=np.int))
+    P = np.zeros([m,n-m], dtype=np.int)
     o = 0
     for i in range(1,n+1):
         if 2**(log2(i)) != i:
