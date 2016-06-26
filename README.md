@@ -15,8 +15,7 @@ It contains :
 ```shell
 ./histogram_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb_cosmos.png  ../simple_LSB/classical_lsb_cosmos.png
 ```
-in the directory and see generated hsitograms)
-
+in the directory and see generated hsitograms).
 In the subdirectory "example" of comparaison, there is a file named generation which contains command examples
 
 -a directory utils which contains useful functions for LSB directories
