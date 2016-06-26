@@ -11,9 +11,11 @@ It contains :
 
 -a directory comparaison which contains tools and programs which are used in order to show that hamming syndrom LSB is far better than simple LSB (for example you can type
 ```shell
-./histogram_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb.png  ../simple_LSB/classical_lsb.png
+./histogram_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb_cosmos.png  ../simple_LSB/classical_lsb_cosmos.png
 ```
 in the directory and see generated hsitograms)
+
+In the subdirectory "example" of comparaison, there is a file named generation which contains command examples
 
 -a directory utils which contains useful functions for LSB directories
 

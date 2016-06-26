@@ -1,10 +1,16 @@
 Comparaison des LSB :
 
 Dans le dossier parent, taper la commande :
-./lsb_comparaison.py ../data/cosmos.png ../hamming_LSB/hamming_lsb.png ../simple_LSB/classical_lsb.png
+./lsb_comparaison.py ../data/cosmos.png ../hamming_LSB/hamming_lsb_cosmos.png ../simple_LSB/classical_lsb_cosmos.png
 
 
 Comparaison des histogrammes :
 
 Dans le dossier parent, taper la commande :
-./histogram_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb.png  ../simple_LSB/classical_lsb.png
+./histogram_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb_cosmos.png  ../simple_LSB/classical_lsb_cosmos.png
+
+
+Comparaison du chi carré :
+
+Dans le dossier parent, taper la commande :
+./chi_square_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb_cosmos.png  ../simple_LSB/classical_lsb_cosmos.png
