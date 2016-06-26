@@ -13,7 +13,7 @@ from PIL import Image
 import numpy as np
 import argparse
 
-parser = argparse.ArgumentParser(description='Reveal a message in image')
+parser = argparse.ArgumentParser(description='Compare histograms of images')
 parser.add_argument('image', metavar='image', nargs='+',
                     help='images we want compute histogram of')
 parser.add_argument('--min_color', metavar='min_color',

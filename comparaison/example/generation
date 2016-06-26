@@ -1,0 +1,10 @@
+Comparaison des LSB :
+
+Dans le dossier parent, taper la commande :
+./lsb_comparaison.py ../data/cosmos.png ../hamming_LSB/hamming_lsb.png ../simple_LSB/classical_lsb.png
+
+
+Comparaison des histogrammes :
+
+Dans le dossier parent, taper la commande :
+./histogram_comparaison.py  ../data/cosmos.png ../hamming_LSB/hamming_lsb.png  ../simple_LSB/classical_lsb.png
