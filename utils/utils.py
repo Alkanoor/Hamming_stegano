@@ -71,3 +71,40 @@ def clearLSB(array,l):
         if color%2==1 and index<=l:
             array[index]-=1
     return array
+
+# calcule le log2 entier d'un entier
+def log2(n):
+    c = 0
+    while n>1:
+        n //= 2
+        c += 1
+    return c
+
+# convertit modulo 2 les valeurs d'un tableau
+def binarize_array(a):
+    for i in range(len(a)):
+        a[i] = a[i]%2
+    return a
+
+# convertit modulo 2 les valeurs d'une matrice
+def binarize_matrix(m):
+    for i in range(len(m)):
+        for j in range(len(m[i])):
+            m[(i,j)] = m[(i,j)]%2
+    return m
+
+# cree une matrice de controle et une matrice systematique de Hamming pour un parametre fixe k
+def create_hamming(k):
+    n = 2**k-1
+    m = n-k
+
+    G = np.diag([1]*m)
+    H = np.diag([1]*(n-m))
+    P = np.zeros([m,n-m])
+    o = 0
+    for i in range(1,n+1):
+        if 2**(log2(i)) != i:
+            for j in range(k):
+                P[(o,j)] = ((i&(1<<j))>>j)
+            o += 1
+    return np.concatenate((G,P.T),axis=0),np.concatenate((P.T,H),axis=1)
