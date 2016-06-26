@@ -1,5 +1,7 @@
 #Hamming syndrom steganography#
 
+If you intend to execute the code, please make sure that numpy, PIL, and matplotlib are installed and usable from python interpreter.
+
 This is a repository which contains what is useful in order to hide a message through hamming syndrom steganography.
 It contains :
 
